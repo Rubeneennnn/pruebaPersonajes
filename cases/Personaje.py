@@ -24,6 +24,3 @@ class Personaje:
     def realizar_accion(self):
         """Método genérico que será sobrescrito (Polimorfismo)."""
         return f"{self.nombre} está esperando..."
-
-    def probar(self):
-        print(f"Personajes: {self.nombre}")

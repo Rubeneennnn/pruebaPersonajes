@@ -1,3 +1,6 @@
+from cases.Personaje import Personaje
+
+
 class Mago(Personaje):
     """Hereda de Personaje. Es otro tipo específico."""
     def __init__(self, canvas, nombre, x, y):

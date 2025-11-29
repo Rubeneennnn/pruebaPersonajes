@@ -24,8 +24,8 @@ inputName.pack(side=tk.LEFT, padx=5)
 escenario_canvas = tk.Canvas(ventana, width=800, height=500, bg="#2c3e50")
 escenario_canvas.pack(fill=tk.BOTH, expand=True)
 
-labelAtaque = tk.Label(ventana)
-labelAtaque.pack(side=tk.LEFT, padx=5, bg="#ecf0f1")
+labelAtaque = tk.Label(ventana, bg="#ecf0f1")
+labelAtaque.pack(side=tk.LEFT, padx=5)
 
 
 # ------------------------

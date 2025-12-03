@@ -7,7 +7,7 @@ from cases.guerrero import Guerrero
 from cases.mago import Mago
 
 # Lista donde guardaremos los personajes
-lista_objetos = []
+lista_personajes = []
 
 # Creamos la interfaz gráfica usando tkinter
 ventana = tk.Tk()
@@ -45,7 +45,7 @@ def crear_guerrero():
     nuevo_guerrero = Guerrero(escenario_canvas, nombre, x, y)
     nuevo_guerrero.dibujar()
 
-    lista_objetos.append(nuevo_guerrero)
+    lista_personajes.append(nuevo_guerrero)
 
 
 def crear_mago():
@@ -55,17 +55,14 @@ def crear_mago():
     nuevo_mago = Mago(escenario_canvas, nombre, x, y)
     nuevo_mago.dibujar()
 
-    lista_objetos.append(nuevo_mago)
+    lista_personajes.append(nuevo_mago)
 
 
 def todos_actuan():
-    if not lista_objetos:
-        messagebox.showinfo("Info", "¡Primero crea algunos personajes!")
-        return
-
-    logs = [p.realizar_accion() for p in lista_objetos]
-
-    messagebox.showinfo("Acciones", " | ".join(logs))
+    texto = ""
+    for personaje in lista_personajes:
+        texto += personaje.realizar_accion()
+    labelAtaque.config(text = texto)
 
 
 # ------------------------
